@@ -16,7 +16,7 @@ SENSOR_ERRORS = Counter('sensor_errors', 'Errors reading the sensor')
 
 @SENSOR_TIME.time()
 def read_sensor():
-  humidity, temperature = Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN, 30, 1)
+    return Adafruit_DHT.read_retry(DHT_SENSOR, DHT_PIN, 30, 1)
 
 def main_loop(loop_delay):
   while True:
